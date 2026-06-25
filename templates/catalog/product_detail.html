@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header">
+    <p class="eyebrow">{{ product.get_product_type_display }}</p>
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
+    <p><strong>£{{ product.price }}</strong></p>
+</section>
+
+<section class="content-band">
+    {% if product.is_in_stock %}
+        <form method="post" action="{% url 'add_to_bag' product.id %}" class="form-card">
+            {% csrf_token %}
+            <label for="quantity">Quantity</label>
+            <input id="quantity" name="quantity" type="number" min="1" value="1">
+            <button class="button" type="submit">Add to bag</button>
+        </form>
+    {% else %}
+        <p>This item is currently out of stock.</p>
+    {% endif %}
+</section>
+{% endblock %}

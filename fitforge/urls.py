@@ -28,6 +28,8 @@ urlpatterns = [
     path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('challenges/', include('challenges.urls')),
     path('workouts/', include('workouts.urls')),
+    path('shop/', include('catalog.urls')),
+    path('checkout/', include('orders.urls')),
 ]
 
 handler404 = 'core.views.custom_404'

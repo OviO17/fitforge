@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Order complete</h1>
+    <p>Your order #{{ order.id }} was successful. You earned purchase reward points.</p>
+    <a class="button" href="{% url 'dashboard' %}">Back to dashboard</a>
+</section>
+{% endblock %}
