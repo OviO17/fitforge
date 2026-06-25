@@ -108,18 +108,38 @@ nav {
 }
 
 .footer-social {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 2.75rem);
 }
 
 .footer-social a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     border: 1px solid var(--line);
     border-radius: 8px;
     background: var(--panel-strong);
     font-weight: 800;
+}
+
+.social-icon {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 1.8;
+}
+
+.social-icon path,
+.social-icon rect,
+.social-icon circle {
+    vector-effect: non-scaling-stroke;
+}
+
+.social-icon-cutout {
+    fill: var(--panel-strong);
+    stroke: var(--panel-strong);
 }
 
 .menu-toggle {
@@ -369,8 +389,8 @@ nav a,
     }
 
     .footer-social a {
-        min-height: 2.75rem;
-        font-size: 0.85rem;
+        width: 100%;
+        height: 2.75rem;
     }
 
     .brand {
