@@ -54,9 +54,19 @@ nav {
     gap: 1rem;
 }
 
-nav a {
+nav a,
+.nav-form button {
+    border: 0;
+    background: transparent;
+    color: var(--accent-strong);
+    cursor: pointer;
+    font: inherit;
     font-weight: 700;
     text-decoration: none;
+}
+
+.nav-form {
+    margin: 0;
 }
 
 .hero,
@@ -130,6 +140,41 @@ nav a {
     padding: 0.8rem 1rem;
     border-left: 4px solid var(--highlight);
     background: #fff8e5;
+}
+
+.narrow {
+    max-width: 760px;
+}
+
+.form-card {
+    display: grid;
+    gap: 0.8rem;
+    max-width: 620px;
+    margin-top: 1.5rem;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font: inherit;
+}
+
+.progress-track {
+    overflow: hidden;
+    height: 1rem;
+    max-width: 520px;
+    border-radius: 999px;
+    background: #dfe7dc;
+}
+
+.progress-track span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
 }
 
 @media (max-width: 700px) {

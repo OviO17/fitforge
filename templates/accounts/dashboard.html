@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Your FitForge dashboard</h1>
+    <p>{{ current_rank }} rank · {{ points }} points · {{ membership.get_status_display }} membership</p>
+    <a class="button" href="{% url 'edit_profile' %}">Edit profile</a>
+</section>
+
+<section class="content-band">
+    <h2>Rank Progress</h2>
+    <div class="progress-track" aria-label="Rank progress">
+        <span style="width: {{ progress_percent }}%"></span>
+    </div>
+    {% if points_needed %}
+        <p>{{ points_needed }} points until {{ next_rank }}.</p>
+    {% else %}
+        <p>You have reached the highest FitForge rank.</p>
+    {% endif %}
+</section>
+
+<section class="section-grid">
+    <article>
+        <h2>Today&apos;s Challenge</h2>
+        {% if today_challenge %}
+            <p>{{ today_challenge.title }}</p>
+            <p>{{ today_challenge.points }} points</p>
+        {% else %}
+            <p>No daily challenge has been published yet.</p>
+        {% endif %}
+    </article>
+    <article>
+        <h2>Profile Goal</h2>
+        <p>{{ profile.get_fitness_goal_display|default:"Choose a goal to unlock better recommendations." }}</p>
+    </article>
+    <article>
+        <h2>Recent Rewards</h2>
+        {% for reward in latest_rewards %}
+            <p>{{ reward.description }}: {{ reward.points }} points</p>
+        {% empty %}
+            <p>Your earned rewards will appear here.</p>
+        {% endfor %}
+    </article>
+</section>
+{% endblock %}
