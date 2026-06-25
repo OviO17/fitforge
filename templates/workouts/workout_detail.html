@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header">
+    <p class="eyebrow">{{ workout.get_difficulty_display }} · {{ workout.training_goal }}</p>
+    <h1>{{ workout.title }}</h1>
+    <p>{{ workout.summary }}</p>
+</section>
+
+<section class="content-band">
+    <h2>Session Instructions</h2>
+    <p>{{ workout.instructions|linebreaksbr }}</p>
+</section>
+
+<section class="content-band">
+    <h2>Complete Workout</h2>
+    <form method="post" action="{% url 'complete_workout' workout.slug %}" class="form-card">
+        {% csrf_token %}
+        <label for="notes">Session notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="How did this workout feel?"></textarea>
+        <button class="button" type="submit">Mark workout complete</button>
+    </form>
+</section>
+
+<section class="content-band">
+    <h2>Your Completion History</h2>
+    {% for completion in completions %}
+        <p>{{ completion.completed_at|date:"d M Y H:i" }}{% if completion.notes %}: {{ completion.notes }}{% endif %}</p>
+    {% empty %}
+        <p>You have not completed this workout yet.</p>
+    {% endfor %}
+</section>
+{% endblock %}

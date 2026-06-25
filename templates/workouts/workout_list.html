@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Workout library</h1>
+    <p>Complete structured workout sessions to earn more points and move toward your next FitForge rank.</p>
+</section>
+
+<section class="section-grid">
+    {% for workout in workouts %}
+        <article>
+            <p class="eyebrow">{{ workout.get_difficulty_display }} · {{ workout.duration_minutes }} minutes · {{ workout.points }} points</p>
+            <h2>{{ workout.title }}</h2>
+            <p>{{ workout.summary }}</p>
+            {% if workout.is_premium %}
+                <p class="status-pill">Premium</p>
+            {% endif %}
+            {% if workout.id in completed_ids %}
+                <p class="status-pill">Completed before</p>
+            {% endif %}
+            <a href="{% url 'workout_detail' workout.slug %}">View workout</a>
+        </article>
+    {% empty %}
+        <article>
+            <h2>No workouts yet</h2>
+            <p>Workout plans will appear here once the site owner publishes them.</p>
+        </article>
+    {% endfor %}
+</section>
+{% endblock %}
