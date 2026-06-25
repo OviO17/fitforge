@@ -1,0 +1,47 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Strength Starter Plan",
+      "slug": "strength-starter-plan",
+      "product_type": "workout_plan",
+      "description": "A four-week beginner strength plan built around simple progressive workouts.",
+      "price": "19.99",
+      "stock": 100,
+      "is_active": true,
+      "is_featured": true,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Lean Fuel Nutrition Guide",
+      "slug": "lean-fuel-nutrition-guide",
+      "product_type": "nutrition_plan",
+      "description": "A practical nutrition guide with balanced meal ideas for fat-loss and performance goals.",
+      "price": "14.99",
+      "stock": 100,
+      "is_active": true,
+      "is_featured": true,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "FitForge Training Bottle",
+      "slug": "fitforge-training-bottle",
+      "product_type": "merchandise",
+      "description": "A reusable training bottle for gym sessions, walks, and daily challenge days.",
+      "price": "9.99",
+      "stock": 25,
+      "is_active": true,
+      "is_featured": false,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
+  }
+]

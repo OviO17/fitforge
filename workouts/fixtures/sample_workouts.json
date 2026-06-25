@@ -1,0 +1,36 @@
+[
+  {
+    "model": "workouts.workoutplan",
+    "pk": 1,
+    "fields": {
+      "title": "Beginner Full Body Forge",
+      "slug": "beginner-full-body-forge",
+      "summary": "A simple full-body session using squats, push-ups, rows, and core work.",
+      "instructions": "Warm up for five minutes.\nComplete three rounds of 10 squats, 8 push-ups, 10 rows, and a 30-second plank.\nCool down and stretch.",
+      "duration_minutes": 30,
+      "difficulty": "beginner",
+      "training_goal": "strength",
+      "points": 30,
+      "is_premium": false,
+      "is_active": true,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "workouts.workoutplan",
+    "pk": 2,
+    "fields": {
+      "title": "Premium Conditioning Builder",
+      "slug": "premium-conditioning-builder",
+      "summary": "A higher-intensity conditioning workout for active FitForge members.",
+      "instructions": "Complete five rounds of 20 jumping jacks, 12 lunges, 10 squat thrusts, and a 45-second plank.\nRest one minute between rounds.",
+      "duration_minutes": 35,
+      "difficulty": "intermediate",
+      "training_goal": "endurance",
+      "points": 40,
+      "is_premium": true,
+      "is_active": true,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
+  }
+]

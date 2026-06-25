@@ -1,0 +1,28 @@
+[
+  {
+    "model": "challenges.dailychallenge",
+    "pk": 1,
+    "fields": {
+      "title": "10 Push-ups and 10 Squats",
+      "description": "Complete 10 controlled push-ups and 10 steady bodyweight squats.",
+      "points": 15,
+      "difficulty": "easy",
+      "active_date": "2026-06-25",
+      "is_active": true,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "challenges.dailychallenge",
+    "pk": 2,
+    "fields": {
+      "title": "30-Second Plank",
+      "description": "Hold a strong plank position for 30 seconds with controlled breathing.",
+      "points": 15,
+      "difficulty": "easy",
+      "active_date": "2026-06-26",
+      "is_active": true,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
+  }
+]
