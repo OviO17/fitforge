@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div>
+        <p class="eyebrow">Fitness subscriptions, challenges, and rewards</p>
+        <h1>Forge stronger habits with FitForge.</h1>
+        <p>Buy workout plans, complete daily challenges, earn rank points, and share progress with a focused fitness community.</p>
+        <div class="actions">
+            <a class="button" href="{% url 'about' %}">Explore FitForge</a>
+        </div>
+    </div>
+</section>
+
+<section class="section-grid" aria-label="FitForge features">
+    <article>
+        <h2>Daily Challenges</h2>
+        <p>Members complete achievable daily tasks such as squats, push-ups, planks, and mobility sessions to build consistency.</p>
+    </article>
+    <article>
+        <h2>Reward Ranks</h2>
+        <p>Every meaningful action earns points toward No Rank, Copper, Bronze, Silver, Gold, Platinum, and Diamond.</p>
+    </article>
+    <article>
+        <h2>Premium Plans</h2>
+        <p>Subscribers unlock structured training and nutrition content while one-off customers can purchase individual resources.</p>
+    </article>
+</section>
+{% endblock %}

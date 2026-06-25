@@ -1,0 +1,141 @@
+:root {
+    --ink: #17201b;
+    --muted: #536057;
+    --surface: #ffffff;
+    --panel: #f3f6f1;
+    --accent: #2f7d57;
+    --accent-strong: #174f37;
+    --highlight: #f0b429;
+    --line: #d9e0d8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--surface);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-strong);
+}
+
+.site-header,
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem clamp(1rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--line);
+}
+
+.site-footer {
+    border-top: 1px solid var(--line);
+    border-bottom: 0;
+    margin-top: 3rem;
+}
+
+.brand {
+    color: var(--ink);
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hero,
+.page-header,
+.content-band,
+.section-grid {
+    padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem);
+}
+
+.hero {
+    min-height: 70vh;
+    display: grid;
+    align-items: center;
+    background: linear-gradient(135deg, #e8f4ea 0%, #ffffff 55%, #fff7df 100%);
+}
+
+.hero h1,
+.page-header h1 {
+    max-width: 780px;
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1;
+}
+
+.hero p,
+.page-header p {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.eyebrow {
+    color: var(--accent-strong);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.section-grid article,
+.content-band {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.section-grid article {
+    padding: 1.25rem;
+}
+
+.messages {
+    padding: 1rem clamp(1rem, 5vw, 4rem);
+}
+
+.message {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    border-left: 4px solid var(--highlight);
+    background: #fff8e5;
+}
+
+@media (max-width: 700px) {
+    .site-header,
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
