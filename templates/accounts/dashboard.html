@@ -25,6 +25,7 @@
         {% if today_challenge %}
             <p>{{ today_challenge.title }}</p>
             <p>{{ today_challenge.points }} points</p>
+            <a href="{% url 'challenge_list' %}">View challenges</a>
         {% else %}
             <p>No daily challenge has been published yet.</p>
         {% endif %}

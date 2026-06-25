@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Daily challenges</h1>
+    <p>Complete simple daily fitness tasks to earn points toward your next FitForge rank.</p>
+</section>
+
+<section class="section-grid">
+    {% for challenge in challenges %}
+        <article>
+            <p class="eyebrow">{{ challenge.get_difficulty_display }} · {{ challenge.points }} points</p>
+            <h2>{{ challenge.title }}</h2>
+            <p>{{ challenge.description }}</p>
+            {% if challenge.id in completed_ids %}
+                <p class="status-pill">Completed</p>
+            {% else %}
+                <form method="post" action="{% url 'complete_challenge' challenge.id %}">
+                    {% csrf_token %}
+                    <button class="button" type="submit">Mark complete</button>
+                </form>
+            {% endif %}
+        </article>
+    {% empty %}
+        <article>
+            <h2>No challenges yet</h2>
+            <p>Daily challenges will appear here once the site owner publishes them.</p>
+        </article>
+    {% endfor %}
+</section>
+{% endblock %}
