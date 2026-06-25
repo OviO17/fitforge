@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="page-header">
+<section class="page-header page-header-membership">
     <h1>FitForge membership</h1>
     {% if membership.is_active %}
         <p>Your membership is active until {{ membership.current_period_end|date:"d M Y" }}. Premium workouts are unlocked.</p>
