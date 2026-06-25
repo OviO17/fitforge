@@ -91,7 +91,8 @@ nav a,
     overflow: hidden;
     text-align: center;
     background:
-        linear-gradient(145deg, rgba(255, 106, 26, 0.28) 0%, rgba(179, 50, 18, 0.14) 34%, rgba(9, 8, 7, 0.96) 72%),
+        linear-gradient(180deg, rgba(9, 8, 7, 0.36), rgba(9, 8, 7, 0.78)),
+        url("/static/images/fitforge-hero-forge.png") center / cover no-repeat,
         linear-gradient(180deg, #19100d 0%, #090807 100%);
 }
 
@@ -242,6 +243,14 @@ nav a,
 .review-item {
     padding: 1rem 0;
     border-bottom: 1px solid var(--line);
+}
+
+.rank-badges {
+    display: block;
+    width: min(100%, 980px);
+    margin: 1.5rem auto 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
 }
 
 @media (max-width: 700px) {
