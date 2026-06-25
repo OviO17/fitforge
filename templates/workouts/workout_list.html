@@ -9,7 +9,7 @@
 <section class="section-grid">
     {% for workout in workouts %}
         <article>
-            <p class="eyebrow">{{ workout.get_difficulty_display }} · {{ workout.duration_minutes }} minutes · {{ workout.points }} points</p>
+            <p class="eyebrow">{{ workout.get_difficulty_display }} &middot; {{ workout.duration_minutes }} minutes &middot; {{ workout.points }} points</p>
             <h2>{{ workout.title }}</h2>
             <p>{{ workout.summary }}</p>
             {% if workout.is_premium %}

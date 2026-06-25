@@ -10,10 +10,19 @@ from .models import ChallengeCompletion, DailyChallenge
 
 @login_required
 def challenge_list(request):
-    challenges = DailyChallenge.objects.filter(is_active=True)[:14]
     completed_ids = set(
         ChallengeCompletion.objects.filter(user=request.user).values_list('challenge_id', flat=True)
     )
+    available_challenges = list(
+        DailyChallenge.objects.filter(is_active=True)
+        .exclude(id__in=completed_ids)
+        .order_by('?')[:6]
+    )
+    completed_challenges = list(
+        DailyChallenge.objects.filter(is_active=True, id__in=completed_ids)
+        .order_by('-active_date')[:4]
+    )
+    challenges = available_challenges + completed_challenges
     return render(
         request,
         'challenges/challenge_list.html',

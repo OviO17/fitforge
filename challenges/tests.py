@@ -30,3 +30,19 @@ class DailyChallengeTests(TestCase):
         self.assertEqual(ChallengeCompletion.objects.filter(user=self.user).count(), 1)
         self.assertEqual(RewardEvent.objects.filter(user=self.user).count(), 1)
         self.assertEqual(get_total_points(self.user), 15)
+
+    def test_completed_challenge_is_replaced_by_available_challenge(self):
+        replacement = DailyChallenge.objects.create(
+            title='20 squats',
+            description='Complete 20 steady squats.',
+            points=20,
+            active_date=date(2035, 1, 1),
+        )
+        for challenge in DailyChallenge.objects.exclude(id=replacement.id):
+            ChallengeCompletion.objects.get_or_create(user=self.user, challenge=challenge)
+        self.client.login(username='sam', password='testpass123')
+
+        response = self.client.get(reverse('challenge_list'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['challenges'][0], replacement)

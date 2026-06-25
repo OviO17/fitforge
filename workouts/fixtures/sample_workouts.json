@@ -32,5 +32,22 @@
       "is_active": true,
       "created_at": "2026-06-25T12:00:00Z"
     }
+  },
+  {
+    "model": "workouts.workoutplan",
+    "pk": 3,
+    "fields": {
+      "title": "Advanced Forge Gauntlet",
+      "slug": "advanced-forge-gauntlet",
+      "summary": "A demanding strength and conditioning session for experienced members.",
+      "instructions": "Warm up for eight minutes.\nComplete six rounds of 12 burpees, 16 alternating lunges, 12 push-ups, 20 mountain climbers, and a 60-second plank.\nRest 90 seconds between rounds and cool down fully.",
+      "duration_minutes": 50,
+      "difficulty": "advanced",
+      "training_goal": "strength and conditioning",
+      "points": 60,
+      "is_premium": true,
+      "is_active": true,
+      "created_at": "2026-06-25T12:00:00Z"
+    }
   }
 ]

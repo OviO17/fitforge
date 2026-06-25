@@ -13,6 +13,16 @@ RANK_THRESHOLDS = [
     ('Diamond', 1200),
 ]
 
+RANK_BADGES = {
+    'No Rank': 'images/ranks/no-rank.svg',
+    'Copper': 'images/ranks/copper.svg',
+    'Bronze': 'images/ranks/bronze.svg',
+    'Silver': 'images/ranks/silver.svg',
+    'Gold': 'images/ranks/gold.svg',
+    'Platinum': 'images/ranks/platinum.svg',
+    'Diamond': 'images/ranks/diamond.svg',
+}
+
 
 def get_total_points(user):
     result = RewardEvent.objects.filter(user=user).aggregate(total=Sum('points'))
@@ -32,6 +42,10 @@ def get_next_rank(points):
         if points < threshold:
             return rank_name, threshold, threshold - points
     return 'Diamond', 1200, 0
+
+
+def get_rank_badge_path(rank_name):
+    return RANK_BADGES.get(rank_name, RANK_BADGES['No Rank'])
 
 
 def award_points(user, event_type, points, description, idempotency_key=''):

@@ -1,15 +1,22 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <section class="page-header">
     <h1>Your FitForge dashboard</h1>
-    <p>{{ current_rank }} rank · {{ points }} points · {{ membership.get_status_display }} membership</p>
+    <p>{{ current_rank }} rank &middot; {{ points }} points &middot; {{ membership.get_status_display }} membership</p>
     <a class="button" href="{% url 'edit_profile' %}">Edit profile</a>
     <a class="button button-secondary" href="{% url 'membership_detail' %}">Membership</a>
 </section>
 
 <section class="content-band">
-    <h2>Rank Progress</h2>
+    <div class="rank-progress-heading">
+        <img class="rank-progress-badge" src="{% static global_rank_badge_path %}" alt="{{ current_rank }} rank badge">
+        <div>
+            <h2>Rank Progress</h2>
+            <p>{{ current_rank }} rank &middot; {{ points }} points</p>
+        </div>
+    </div>
     <div class="progress-track" aria-label="Rank progress">
         <span style="width: {{ progress_percent }}%"></span>
     </div>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Diamond badge">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#baf7ff"/>
+      <stop offset="55%" stop-color="#45b7ff"/>
+      <stop offset="100%" stop-color="#071622"/>
+    </radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="url(#glow)" stroke="#7de9ff" stroke-width="6"/>
+  <path d="M34 55 49 34h22l15 21-26 34Z" fill="#1b78bd" stroke="#d8fbff" stroke-width="5"/>
+  <text x="60" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#ffffff">DM</text>
+</svg>

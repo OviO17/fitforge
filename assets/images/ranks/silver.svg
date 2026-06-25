@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Silver badge">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#f3f6fb"/>
+      <stop offset="100%" stop-color="#1a2026"/>
+    </radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="url(#glow)" stroke="#c8d1dc" stroke-width="6"/>
+  <path d="M35 76 48 36h24l13 40-25 15Z" fill="#5d6874" stroke="#f7fbff" stroke-width="5"/>
+  <text x="60" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#ffffff">SV</text>
+</svg>

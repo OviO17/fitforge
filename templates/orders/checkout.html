@@ -3,7 +3,7 @@
 {% block content %}
 <section class="page-header narrow">
     <h1>Checkout</h1>
-    <p>Total: £{{ total }}</p>
+    <p>Total: €{{ total }}</p>
     <form method="post" class="form-card">
         {% csrf_token %}
         {{ form.as_p }}

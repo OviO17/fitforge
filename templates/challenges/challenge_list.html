@@ -9,7 +9,7 @@
 <section class="section-grid">
     {% for challenge in challenges %}
         <article>
-            <p class="eyebrow">{{ challenge.get_difficulty_display }} · {{ challenge.points }} points</p>
+            <p class="eyebrow">{{ challenge.get_difficulty_display }} &middot; {{ challenge.points }} points</p>
             <h2>{{ challenge.title }}</h2>
             <p>{{ challenge.description }}</p>
             {% if challenge.id in completed_ids %}

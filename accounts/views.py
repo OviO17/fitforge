@@ -3,7 +3,7 @@ from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 
-from challenges.models import DailyChallenge
+from challenges.models import ChallengeCompletion, DailyChallenge
 from memberships.models import Membership
 from rewards.models import RewardEvent
 from rewards.services import get_next_rank, get_rank_for_points, get_total_points, award_points
@@ -45,7 +45,13 @@ def dashboard(request):
     next_rank, next_threshold, points_needed = get_next_rank(points)
     progress_percent = 100 if points_needed == 0 else int((points / next_threshold) * 100)
     latest_rewards = RewardEvent.objects.filter(user=request.user)[:5]
-    today_challenge = DailyChallenge.objects.filter(is_active=True).order_by('-active_date').first()
+    completed_challenge_ids = ChallengeCompletion.objects.filter(user=request.user).values_list('challenge_id', flat=True)
+    today_challenge = (
+        DailyChallenge.objects.filter(is_active=True)
+        .exclude(id__in=completed_challenge_ids)
+        .order_by('?')
+        .first()
+    )
 
     return render(
         request,

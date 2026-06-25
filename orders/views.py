@@ -28,7 +28,7 @@ def checkout(request):
                 stripe.api_key = settings.STRIPE_SECRET_KEY
                 intent = stripe.PaymentIntent.create(
                     amount=int(total * 100),
-                    currency='gbp',
+                    currency='eur',
                     metadata={'username': request.user.username},
                 )
                 order.stripe_pid = intent.id
