@@ -114,6 +114,11 @@ nav a,
     text-decoration: none;
 }
 
+.button-secondary {
+    margin-left: 0.5rem;
+    background: var(--ink);
+}
+
 .section-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

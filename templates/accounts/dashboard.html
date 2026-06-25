@@ -5,6 +5,7 @@
     <h1>Your FitForge dashboard</h1>
     <p>{{ current_rank }} rank · {{ points }} points · {{ membership.get_status_display }} membership</p>
     <a class="button" href="{% url 'edit_profile' %}">Edit profile</a>
+    <a class="button button-secondary" href="{% url 'membership_detail' %}">Membership</a>
 </section>
 
 <section class="content-band">

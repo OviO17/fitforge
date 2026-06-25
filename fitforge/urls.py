@@ -30,6 +30,7 @@ urlpatterns = [
     path('workouts/', include('workouts.urls')),
     path('shop/', include('catalog.urls')),
     path('checkout/', include('orders.urls')),
+    path('membership/', include('memberships.urls')),
 ]
 
 handler404 = 'core.views.custom_404'
