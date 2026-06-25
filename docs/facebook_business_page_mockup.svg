@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">FitForge Facebook business page mockup</title>
+  <desc id="desc">A mock social media business page for the FitForge fitness subscription application.</desc>
+  <rect width="1200" height="760" fill="#f0f2f5"/>
+  <rect x="120" y="70" width="960" height="620" rx="16" fill="#ffffff"/>
+  <rect x="120" y="70" width="960" height="230" rx="16" fill="#2f7d57"/>
+  <rect x="120" y="230" width="960" height="70" fill="#2f7d57"/>
+  <circle cx="245" cy="300" r="80" fill="#ffffff"/>
+  <circle cx="245" cy="300" r="68" fill="#17201b"/>
+  <text x="203" y="316" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">FF</text>
+  <text x="350" y="340" fill="#17201b" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">FitForge</text>
+  <text x="350" y="380" fill="#536057" font-family="Arial, Helvetica, sans-serif" font-size="24">Fitness subscription, daily challenges and reward ranks</text>
+  <rect x="830" y="325" width="170" height="48" rx="8" fill="#2f7d57"/>
+  <text x="867" y="357" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Sign Up</text>
+  <line x1="160" y1="430" x2="1040" y2="430" stroke="#d9e0d8" stroke-width="2"/>
+  <text x="170" y="475" fill="#17201b" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">About</text>
+  <text x="170" y="515" fill="#536057" font-family="Arial, Helvetica, sans-serif" font-size="21">Complete daily challenges, earn points and unlock premium workouts.</text>
+  <rect x="170" y="560" width="390" height="90" rx="10" fill="#f3f6f1" stroke="#d9e0d8"/>
+  <text x="195" y="595" fill="#17201b" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Today&apos;s challenge</text>
+  <text x="195" y="628" fill="#536057" font-family="Arial, Helvetica, sans-serif" font-size="20">10 push-ups and 10 squats</text>
+  <rect x="620" y="560" width="390" height="90" rx="10" fill="#fff8e5" stroke="#f0b429"/>
+  <text x="645" y="595" fill="#17201b" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Rank up</text>
+  <text x="645" y="628" fill="#536057" font-family="Arial, Helvetica, sans-serif" font-size="20">Copper, Bronze, Silver, Gold, Platinum, Diamond</text>
+</svg>
