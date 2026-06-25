@@ -47,11 +47,22 @@ a {
 }
 
 .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
     color: var(--accent-strong);
     font-size: 1.3rem;
     font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.brand img {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 18px rgba(255, 106, 26, 0.42);
 }
 
 nav {

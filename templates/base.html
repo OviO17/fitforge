@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ meta_description|default:'FitForge fitness subscriptions, daily challenges, rewards, and community progress.' }}">
     <title>{{ page_title|default:'FitForge' }}</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" sizes="any">
+    <link rel="icon" href="{% static 'images/favicon-32x32.png' %}" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header class="site-header">
-        <a class="brand" href="{% url 'home' %}">FitForge</a>
+        <a class="brand" href="{% url 'home' %}">
+            <img src="{% static 'images/fitforge-logo.png' %}" alt="" aria-hidden="true">
+            <span>FitForge</span>
+        </a>
         <nav aria-label="Main navigation">
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'about' %}">About</a>
