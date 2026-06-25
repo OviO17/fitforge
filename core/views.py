@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from mailing.forms import NewsletterSignupForm
+
 
 def home(request):
     return render(
@@ -8,6 +10,7 @@ def home(request):
         {
             'page_title': 'FitForge',
             'meta_description': 'FitForge helps members buy fitness plans, complete daily challenges, earn ranks, and join a supportive training community.',
+            'newsletter_form': NewsletterSignupForm(),
         },
     )
 

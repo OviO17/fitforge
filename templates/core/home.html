@@ -26,4 +26,15 @@
         <p>Subscribers unlock structured training and nutrition content while one-off customers can purchase individual resources.</p>
     </article>
 </section>
+
+<section class="content-band">
+    <h2>Join the FitForge newsletter</h2>
+    <p>Get challenge reminders, training ideas, and membership offers.</p>
+    <form method="post" action="{% url 'newsletter_signup' %}" class="form-card">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{% url 'home' %}">
+        {{ newsletter_form.as_p }}
+        <button class="button" type="submit">Sign up</button>
+    </form>
+</section>
 {% endblock %}
