@@ -200,6 +200,11 @@ nav a,
     border-bottom: 1px solid var(--line);
 }
 
+.review-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
 @media (max-width: 700px) {
     .site-header,
     .site-footer {

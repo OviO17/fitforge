@@ -20,4 +20,26 @@
         <p>This item is currently out of stock.</p>
     {% endif %}
 </section>
+
+<section class="content-band">
+    <h2>Reviews</h2>
+    {% if user.is_authenticated %}
+        <a class="button" href="{% url 'create_review' product.id %}">Write or update review</a>
+    {% else %}
+        <p>Log in to leave a review.</p>
+    {% endif %}
+
+    {% for review in product.reviews.all %}
+        <article class="review-item">
+            <h3>{{ review.title }}</h3>
+            <p>{{ review.rating }}/5 by {{ review.user.username }}</p>
+            <p>{{ review.comment }}</p>
+            {% if review.user == request.user or request.user.is_staff %}
+                <a href="{% url 'delete_review' review.id %}">Delete review</a>
+            {% endif %}
+        </article>
+    {% empty %}
+        <p>No reviews yet.</p>
+    {% endfor %}
+</section>
 {% endblock %}

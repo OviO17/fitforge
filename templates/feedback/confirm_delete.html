@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header narrow">
+    <h1>Delete review</h1>
+    <p>Are you sure you want to delete "{{ review.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button class="button" type="submit">Delete review</button>
+        <a href="{% url 'product_detail' review.product.slug %}">Cancel</a>
+    </form>
+</section>
+{% endblock %}

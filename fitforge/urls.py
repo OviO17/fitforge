@@ -32,6 +32,7 @@ urlpatterns = [
     path('checkout/', include('orders.urls')),
     path('membership/', include('memberships.urls')),
     path('community/', include('progress.urls')),
+    path('reviews/', include('feedback.urls')),
 ]
 
 handler404 = 'core.views.custom_404'
