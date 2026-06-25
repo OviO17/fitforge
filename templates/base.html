@@ -57,8 +57,33 @@
     </main>
 
     <footer class="site-footer">
-        <p>FitForge supports fitness goals through plans, challenges, rewards, and community accountability.</p>
-        <a href="https://www.nhs.uk/live-well/exercise/" target="_blank" rel="noopener noreferrer">Exercise safety guidance</a>
+        <div class="footer-brand">
+            <a class="brand" href="{% url 'home' %}">
+                <img src="{% static 'images/fitforge-logo.png' %}" alt="" aria-hidden="true">
+                <span>FitForge</span>
+            </a>
+            <p>Forging stronger habits through plans, challenges, rewards, and community accountability.</p>
+            <p class="established">Established 2026</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'product_list' %}">Shop</a>
+            <a href="{% url 'membership_detail' %}">Membership</a>
+            <a href="{% url 'challenge_list' %}">Challenges</a>
+        </nav>
+
+        <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+        </div>
+
+        <div class="footer-meta">
+            <a href="https://www.nhs.uk/live-well/exercise/" target="_blank" rel="noopener noreferrer">Exercise safety guidance</a>
+            <p>&copy; 2026 FitForge. All rights reserved.</p>
+        </div>
     </footer>
     <script src="{% static 'js/navigation.js' %}"></script>
 </body>
