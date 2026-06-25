@@ -17,7 +17,12 @@
             <img src="{% static 'images/fitforge-logo.png' %}" alt="" aria-hidden="true">
             <span>FitForge</span>
         </a>
-        <nav aria-label="Main navigation">
+        <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main-navigation" class="main-navigation" aria-label="Main navigation">
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'product_list' %}">Shop</a>
@@ -55,5 +60,6 @@
         <p>FitForge supports fitness goals through plans, challenges, rewards, and community accountability.</p>
         <a href="https://www.nhs.uk/live-well/exercise/" target="_blank" rel="noopener noreferrer">Exercise safety guidance</a>
     </footer>
+    <script src="{% static 'js/navigation.js' %}"></script>
 </body>
 </html>

@@ -40,6 +40,12 @@ a {
     background: rgba(9, 8, 7, 0.96);
 }
 
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
 .site-footer {
     border-top: 1px solid var(--line);
     border-bottom: 0;
@@ -69,6 +75,41 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.28rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel-strong);
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 1.3rem;
+    height: 0.14rem;
+    border-radius: 999px;
+    background: var(--accent-strong);
+    transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(0.42rem) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-0.42rem) rotate(-45deg);
 }
 
 nav a,
@@ -265,8 +306,101 @@ nav a,
 }
 
 @media (max-width: 700px) {
-    .site-header,
+    .site-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: 0.85rem 1rem;
+    }
+
     .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1.25rem 1rem;
+    }
+
+    .brand {
+        font-size: 1.05rem;
+    }
+
+    .brand img {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        justify-self: end;
+    }
+
+    .main-navigation {
+        display: none;
+        grid-column: 1 / -1;
+        width: 100%;
+        margin-top: 0.85rem;
+        padding: 0.75rem;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(23, 18, 15, 0.98);
+    }
+
+    .main-navigation.is-open {
+        display: grid;
+        gap: 0.2rem;
+    }
+
+    .main-navigation a,
+    .main-navigation .nav-form button {
+        width: 100%;
+        padding: 0.78rem;
+        border-radius: 6px;
+        text-align: left;
+    }
+
+    .main-navigation a:hover,
+    .main-navigation .nav-form button:hover {
+        background: #2b160d;
+    }
+
+    .hero {
+        min-height: 64vh;
+        padding: 3rem 1rem;
+        background-position: center;
+    }
+
+    .hero h1,
+    .page-header h1 {
+        font-size: clamp(2.25rem, 14vw, 3.6rem);
+    }
+
+    .hero p,
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .page-header,
+    .content-band,
+    .section-grid {
+        padding: 2rem 1rem;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-band,
+    .section-grid article {
+        border-radius: 6px;
+    }
+
+    .rank-badges {
+        margin-top: 1rem;
+        max-height: 12rem;
+        object-fit: cover;
+        object-position: left center;
+    }
+
+    .row-item {
         align-items: flex-start;
         flex-direction: column;
     }
