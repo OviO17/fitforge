@@ -95,7 +95,7 @@ These models support clear relationships between users, rewards, products, order
 
 ## Agile Development Evidence
 
-Development is recorded through small Git commits. Planned GitHub issue labels:
+Development is recorded through small Git commits and agile planning evidence in [docs/agile_evidence.md](docs/agile_evidence.md). Planned GitHub issue labels:
 
 - `feature`
 - `bug`
