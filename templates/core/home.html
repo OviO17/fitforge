@@ -8,8 +8,31 @@
         <h1>FitForge</h1>
         <p>Forge stronger habits with workout plans, daily challenges, reward ranks, and a focused fitness community.</p>
         <div class="actions">
-            <a class="button" href="{% url 'about' %}">Explore FitForge</a>
+            <a class="button" href="{% url 'membership_detail' %}">Start membership</a>
+            <a class="button button-secondary" href="{% url 'product_list' %}">Visit shop</a>
         </div>
+    </div>
+</section>
+
+<section class="home-intro">
+    <div>
+        <p class="eyebrow">Built for consistency</p>
+        <h2>Train, earn, and unlock more each week.</h2>
+        <p>FitForge combines a monthly fitness membership with one-off e-commerce purchases. Members unlock premium workouts, complete daily challenges, earn rank badges, and use the community feed to stay accountable.</p>
+    </div>
+    <div class="home-stats" aria-label="FitForge highlights">
+        <article>
+            <strong>€9.99</strong>
+            <span>monthly membership</span>
+        </article>
+        <article>
+            <strong>7</strong>
+            <span>reward ranks</span>
+        </article>
+        <article>
+            <strong>30</strong>
+            <span>days of access</span>
+        </article>
     </div>
 </section>
 
@@ -26,6 +49,48 @@
     <article>
         <h2>Premium Plans</h2>
         <p>Subscribers unlock structured training and nutrition content while one-off customers can purchase individual resources.</p>
+    </article>
+</section>
+
+<section class="content-band">
+    <p class="eyebrow">How FitForge works</p>
+    <div class="steps-grid">
+        <article>
+            <span>01</span>
+            <h2>Join the forge</h2>
+            <p>Create your account, set your profile goal, and start building your first points.</p>
+        </article>
+        <article>
+            <span>02</span>
+            <h2>Complete sessions</h2>
+            <p>Finish daily challenges and workouts to earn points toward your next rank badge.</p>
+        </article>
+        <article>
+            <span>03</span>
+            <h2>Unlock premium</h2>
+            <p>Start membership to access premium workouts and keep progressing beyond beginner sessions.</p>
+        </article>
+    </div>
+</section>
+
+<section class="section-grid" aria-label="Membership and shop options">
+    <article>
+        <p class="eyebrow">Subscription</p>
+        <h2>Membership access</h2>
+        <p>Unlock premium workout content for 30 days, including advanced sessions for members who want progression.</p>
+        <a href="{% url 'membership_detail' %}">View membership</a>
+    </article>
+    <article>
+        <p class="eyebrow">E-commerce</p>
+        <h2>One-off purchases</h2>
+        <p>Buy workout guides, nutrition resources, and FitForge products through the shop and checkout flow.</p>
+        <a href="{% url 'product_list' %}">Browse products</a>
+    </article>
+    <article>
+        <p class="eyebrow">Community</p>
+        <h2>Progress posts</h2>
+        <p>Share wins, update your training notes, and delete posts from the frontend whenever needed.</p>
+        <a href="{% url 'progress_list' %}">Open community</a>
     </article>
 </section>
 
