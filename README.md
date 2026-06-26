@@ -116,34 +116,15 @@ Suggested user story examples:
 
 ## Testing
 
-Automated tests currently cover:
-
-- Reward rank and point calculation.
-- Idempotent reward events.
-- Daily challenge completion can only be claimed once.
-- Checkout creates a paid order and purchase reward.
-- Progress post owners can delete their posts.
-- Other users cannot delete posts they do not own.
+Automated tests currently cover rewards, daily challenges, checkout, and community post permissions.
 
 Run tests:
 
 ```bash
-python manage.py test rewards challenges orders progress
+python manage.py test
 ```
 
-Manual testing will be expanded before final submission to cover:
-
-- Registration, login, logout.
-- Profile update and profile reward.
-- Daily challenge completion feedback.
-- Workout completion feedback.
-- Product add/remove bag flow.
-- Checkout success and unsuccessful checkout handling.
-- Membership activation and premium content access.
-- Progress post CRUD.
-- Review create/update/delete.
-- Newsletter signup validation.
-- 404 page, sitemap, robots, and responsive layout checks.
+Detailed automated and manual testing evidence is recorded in [TESTING.md](TESTING.md).
 
 ## Local Setup
 
