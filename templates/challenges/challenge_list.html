@@ -14,6 +14,7 @@
             <p>{{ challenge.description }}</p>
             {% if challenge.id in completed_ids %}
                 <p class="status-pill">Completed</p>
+                <p class="challenge-reset-note">Daily completed. A new challenge set refreshes tomorrow.</p>
             {% else %}
                 <form method="post" action="{% url 'complete_challenge' challenge.id %}">
                     {% csrf_token %}

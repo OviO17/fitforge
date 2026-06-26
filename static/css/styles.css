@@ -424,6 +424,18 @@ nav a,
     color: var(--ink);
 }
 
+.button-danger {
+    background: #2b160d;
+    color: var(--accent-strong);
+    border-color: rgba(255, 106, 26, 0.55);
+    box-shadow: none;
+}
+
+.button-danger:hover {
+    background: var(--ember);
+    color: var(--ink);
+}
+
 .section-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -516,6 +528,12 @@ nav a,
     background: #2b160d;
     color: var(--accent-strong);
     font-weight: 800;
+}
+
+.challenge-reset-note {
+    margin-top: 0.75rem;
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 
 .row-item {
