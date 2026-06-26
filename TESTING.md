@@ -37,7 +37,7 @@ Current result:
 | Challenge rotation | Complete a challenge and return to Challenges | Completed challenge moves behind fresh uncompleted challenges | Pass |
 | Workout completion | Open an unlocked workout, enter notes, submit completion | Completion history updates and workout points are awarded | Pass |
 | Premium workout lock | Open premium workout without active membership | User is redirected with membership warning | Pass |
-| Membership activation | Open Membership and click Start membership | Membership becomes active and premium workouts unlock | Pass |
+| Membership activation | Open Membership, confirm `€9.99/month` pricing is shown, and click Start membership | Membership becomes active for 30 days and premium workouts unlock | Pass |
 | Product list | Open Shop | Active products display with euro prices | Pass |
 | Product detail | Open a product and submit Add to bag | Product is added to the session bag | Pass |
 | Bag remove | Open Bag and remove an item | Item is removed and total updates | Pass |
@@ -77,4 +77,5 @@ Current result:
 
 - Stripe requires real test keys in environment variables before final deployed payment testing.
 - The local checkout has a development fallback when Stripe keys are not set, so final deployment should be tested with Stripe test mode.
+- Membership activation simulates a subscription payment in the assessment build; a production version should connect this to Stripe subscriptions.
 - The Facebook business page evidence is currently a mockup, which is acceptable for assessment evidence but can be replaced with a real business page later.

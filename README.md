@@ -19,6 +19,7 @@ FitForge uses a mixed e-commerce model:
 
 - One-off purchases: workout plans, nutrition guides, and merchandise.
 - Membership subscription: unlocks premium workouts and gives members extra motivation through rewards.
+- Membership pricing: the subscription is presented as `€9.99/month`; the assessment build simulates membership activation while product checkout demonstrates the e-commerce payment flow.
 - Retention strategy: daily challenges, workout completions, and rank progression encourage users to return.
 - Marketing strategy: newsletter signup, social media page/mockup, SEO metadata, sitemap, and robots.txt.
 

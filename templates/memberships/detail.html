@@ -6,26 +6,31 @@
     {% if membership.is_active %}
         <p>Your membership is active until {{ membership.current_period_end|date:"d M Y" }}. Premium workouts are unlocked.</p>
     {% else %}
-        <p>Start membership to unlock premium workouts, premium nutrition content, and 50 reward points.</p>
+        <p>Unlock premium workouts, nutrition content, and a 50 point rank boost with a monthly membership.</p>
+        <div class="price-lockup">
+            <span class="price">&euro;9.99</span>
+            <span class="price-term">per month</span>
+        </div>
         <form method="post" action="{% url 'start_membership' %}">
             {% csrf_token %}
             <button class="button" type="submit">Start membership</button>
         </form>
+        <p class="membership-note">Assessment build: membership activation simulates a paid subscription. Product checkout uses the e-commerce payment flow.</p>
     {% endif %}
 </section>
 
 <section class="section-grid">
     <article>
         <h2>Premium Workouts</h2>
-        <p>Access member-only workouts designed for structured progression.</p>
+        <p>Access member-only workouts, including advanced sessions locked to active members.</p>
     </article>
     <article>
         <h2>Rank Boost</h2>
         <p>Earn 50 points when your FitForge membership starts.</p>
     </article>
     <article>
-        <h2>Community Focus</h2>
-        <p>Use the dashboard, challenges, workouts, and progress posts to stay accountable.</p>
+        <h2>Monthly Access</h2>
+        <p>Membership lasts 30 days from activation and can be used to demonstrate subscription access control.</p>
     </article>
 </section>
 {% endblock %}
